@@ -25,7 +25,7 @@ f = open("hello.txt", "w+t")
 print("Hello File!", file=f)
 f.seek(0)
 print("Text from file:", f.read(), end="\n\n")
-f.close
+f.close()
 
 #Console input
 #The input() function allows user input.
