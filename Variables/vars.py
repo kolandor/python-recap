@@ -123,4 +123,42 @@ print(f"{anyType} : Type is: {type(anyType)}")
 anyType = 10
 print(f"{anyType} : Type is: {type(anyType)}")
 anyType = 3.14
-print(f"{anyType} : Type is: {type(anyType)}")
+print(f"{anyType} : Type is: {type(anyType)}\n")
+
+# Bytes
+# The bytes() function returns a bytes object.
+
+# It can convert objects into bytes objects, or create empty bytes object of the specified size.
+
+# The difference between bytes() and bytearray() is that bytes() returns an object that cannot be modified, 
+# and bytearray() returns an object that can be modified.
+
+# Non modified example
+# bytes(x, encoding, error)
+# x	        A source to use when creating the bytes object.
+#           If it is an integer, an empty bytes object of the specified size will be created.
+#           If it is a String, make sure you specify the encoding of the source.
+# encoding	The encoding of the string
+# error	    Specifies what to do if the encoding fails.
+oneByte = bytes(1)
+print(f"oneByte value: {oneByte}\nvar type: {type(oneByte)}\n")
+
+# Try modyfying
+try:
+    oneByte[0] = 10
+    print(f"oneByte value: {oneByte}\nvar type: {type(oneByte)}\n")
+except Exception as e:
+    print(f"!!!!!!ERROR: {e}\n")
+
+someBytes = bytes(2)
+print(f"someBytes value: {someBytes}\nvar type: {type(oneByte)}\n")
+
+# Modified example
+# The bytearray() function returns a bytearray object.
+# It can convert objects into bytearray objects, or create empty bytearray object of the specified size.
+oneByte = bytearray(1)
+print(f"oneByte value: {oneByte}\nvar type: {type(oneByte)}\n")
+oneByte[0] = 10
+print(f"oneByte value: {oneByte}\nvar type: {type(oneByte)}\n")
+someBytes = bytearray(2)
+print(f"someBytes value: {someBytes}\nvar type: {type(oneByte)}\n")
